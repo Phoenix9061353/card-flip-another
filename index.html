@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Simple Card Game (another version)</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading__text-box">
+        <h1 class="heading">Card Game</h1>
+      </div>
+      <div class="card-container hide">
+        <div class="card">
+          <div class="card__side card__side-front">
+            <div class="card__image card__image-front"></div>
+          </div>
+          <div class="card__side card__side-back"></div>
+        </div>
+        <div class="card">
+          <div class="card__side card__side-front">
+            <div class="card__image card__image-front"></div>
+          </div>
+          <div class="card__side card__side-back"></div>
+        </div>
+        <div class="card">
+          <div class="card__side card__side-front">
+            <div class="card__image card__image-front"></div>
+          </div>
+          <div class="card__side card__side-back"></div>
+        </div>
+        <div class="card">
+          <div class="card__side card__side-front">
+            <div class="card__image card__image-front"></div>
+          </div>
+          <div class="card__side card__side-back"></div>
+        </div>
+        <div class="card">
+          <div class="card__side card__side-front">
+            <div class="card__image card__image-front"></div>
+          </div>
+          <div class="card__side card__side-back"></div>
+        </div>
+        <div class="card">
+          <div class="card__side card__side-front">
+            <div class="card__image card__image-front"></div>
+          </div>
+          <div class="card__side card__side-back"></div>
+        </div>
+        <div class="card">
+          <div class="card__side card__side-front">
+            <div class="card__image card__image-front"></div>
+          </div>
+          <div class="card__side card__side-back"></div>
+        </div>
+        <div class="card">
+          <div class="card__side card__side-front">
+            <div class="card__image card__image-front"></div>
+          </div>
+          <div class="card__side card__side-back"></div>
+        </div>
+        <div class="card">
+          <div class="card__side card__side-front">
+            <div class="card__image card__image-front"></div>
+          </div>
+          <div class="card__side card__side-back"></div>
+        </div>
+        <div class="card">
+          <div class="card__side card__side-front">
+            <div class="card__image card__image-front"></div>
+          </div>
+          <div class="card__side card__side-back"></div>
+        </div>
+        <div class="card">
+          <div class="card__side card__side-front">
+            <div class="card__image card__image-front"></div>
+          </div>
+          <div class="card__side card__side-back"></div>
+        </div>
+        <div class="card">
+          <div class="card__side card__side-front">
+            <div class="card__image card__image-front"></div>
+          </div>
+          <div class="card__side card__side-back"></div>
+        </div>
+        <div class="mask hide"></div>
+        <div class="turn turn__computer">Computer</div>
+        <div class="turn turn__player">Your Turn</div>
+      </div>
+    </div>
+    <a href="#" class="btn btn--start">Play Game</a>
+    <a href="#" class="btn btn--retry hide">Try Again?</a>
+    <a href="#rule" class="howToPlay">How to Play</a>
+    <div class="rule" id="rule">
+      <div class="rule__content">
+        <a href="#main" class="rule__close">&times;</a>
+        <h3 class="rule__header">玩法說明</h3>
+        <ul class="rule__list">
+          <li class="rule__things">
+            玩法為與電腦的對戰配對消消樂：<br />翻牌後可查看顏色，若選到兩張牌都是相同顏色即配對成功；反之，則回到蓋牌的狀態，並將翻牌權交給電腦<br />
+            直到畫面上的牌都配對完成後，遊戲結束
+          </li>
+          <li class="rule__things">遊戲結束後可選擇是否再進行一次遊戲</li>
+        </ul>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
