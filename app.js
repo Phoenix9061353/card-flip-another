@@ -28,8 +28,7 @@ let scoreP = 0,
   flipCounter = 0;
 
 //////////////////////////////////////
-//Function
-
+//Function(For cards' basic setting)
 //Shuffle Cards
 const shuffleCards = function (cardSet) {
   for (let i = cardSet.length - 1; i > 0; i--) {
@@ -38,7 +37,7 @@ const shuffleCards = function (cardSet) {
   }
 };
 
-//Set Card (Only Back side, after shuffle cards)
+//Set Card (after shuffle cards)
 const setCards = function () {
   cardsBackSide.forEach((b, i) => {
     b.classList.add(`card__side-back-${cardPlaySet[i].id}`);
@@ -47,6 +46,8 @@ const setCards = function () {
   });
 };
 
+//////////////////////////////////////
+//Function(for basic game system)
 //Reset card tool
 const resetCardTool = function () {
   [firstCard, secondCard, previousSelect, targetC, targetCardC] = [
@@ -134,7 +135,19 @@ const flipCard = function (e) {
   }
 };
 
-//computer select
+//Turn Change
+const turnChange = function () {
+  turn = !turn;
+  cardContainer.classList.toggle('brown');
+  mask.classList.toggle('hide');
+  turnPlayer.classList.toggle('show');
+  turnComputer.classList.toggle('show');
+  if (turn === false) computerPlay();
+};
+
+//////////////////////////////////////
+//Function(for computer's play system)
+//Computer select
 const computerSelect = function (flippedTimes) {
   if (flippedTimes === 0) {
     targetC =
@@ -170,16 +183,7 @@ const computerPlay = function () {
   }
 };
 
-//Turn Change
-const turnChange = function () {
-  turn = !turn;
-  cardContainer.classList.toggle('brown');
-  mask.classList.toggle('hide');
-  turnPlayer.classList.toggle('show');
-  turnComputer.classList.toggle('show');
-  if (turn === false) computerPlay();
-};
-
+//////////////////////////////////////
 //Play Game
 const playGame = function () {
   //隱藏開始按鈕 -> 洗牌、發牌 -> 卡片加上可翻功能、顯示卡片
